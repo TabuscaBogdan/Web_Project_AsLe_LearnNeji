@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 0;
     padding: 0;
     background: #000000;
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -48,11 +48,35 @@ img.alignright {
 }
 
 img.aligncenter {
-    margin: 0px auto;
+    margin: 0 auto;
 }
 #wrapper {
     margin: 0 auto;
     padding: 0;
+}
+#footer {
+    border: 45px solid;
+    border-image: url("../Images/menu-wrapper.png") 30 stretch;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+
+    height: 60px;
+    margin: 0 auto;
+    background: black;
+    position: fixed;
+    bottom:0;
+    width:100%;
+}
+#footer p {
+    margin: 0;
+    padding-top: 60px;
+    bottom: 0;
+    line-height: normal;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 30px;
+    color: white;
 }
 /*Top Menu */
 #menu-wrapper {
@@ -63,7 +87,7 @@ img.aligncenter {
 #menu {
     width: 900px;
     height: 50px;
-    margin: 0px auto 0 auto;
+    margin: 0 auto 0 auto;
     padding: 0px 40px;
     text-align: center;
 }
@@ -95,4 +119,16 @@ img.aligncenter {
 
 #menu a:hover {
     background: #770818;
+}
+.util_btn {
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
 }

@@ -26,14 +26,20 @@
 	
 	<div id="leftmenu">
 	<ul>
-	   <li><a href='#'>Learning Canvas</a></li>
+	   <li><a href='Main.html'>Learning Canvas</a></li>
 	   <li class="sub_menu_here"><a href='#'>Language</a>
 		  <ul>
 			 <li><a href='#'>Japanese</a> </li>
 			 <li><a href='#'>Korean</a> </li>
 		  </ul>
 	   </li>
-	   <li><a href='#'>Photos</a></li>
+	   <li class="sub_menu_here"><a href='#'>Simbols</a>
+        <ul>
+            <li><a href='#'>Do  や</a> </li>
+            <li><a href='#'>Watever   ま</a> </li>
+            <li><a href='#'>Test  す</a> </li>
+        </ul>
+       </li>
 	   <li><a href='#'>About</a></li>
 	   <li class="last"><a href='#'>Learning sites</a></li>
 	</ul>
@@ -41,19 +47,17 @@
 	<!-- Left Menu End-->
 	
 	<canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:25%;border:2px solid;"> </canvas>
-    <div style="position:absolute;top:12%;left:60%;">Choose Color</div>
-    <div style="position:absolute;top:15%;left:60%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
-    <div style="position:absolute;top:15%;left:61%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
-    <div style="position:absolute;top:15%;left:62%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
-    <div style="position:absolute;top:17%;left:60%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
-    <div style="position:absolute;top:17%;left:61%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
-    <div style="position:absolute;top:17%;left:62%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
-    <div style="position:absolute;top:20%;left:60%;">Eraser</div>
-    <div style="position:absolute;top:25%;left:60%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+    <div style="position:absolute;top:12%;left:49%;">Brush</div>
+    <div style="position:absolute;top:14%;left:49%;width:20px;height:20px;background:black;border:2px solid" id="black" onclick="color(this)"></div>
+    <div style="position:absolute;top:20%;left:49%;">Eraser</div>
+    <div style="position:absolute;top:25%;left:49%;width:20px;height:20px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
     <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
-    <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:75%;left:25%;">
-    <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:75%;left:30%;">
+    <input class="util_btn" type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:60%;left:25%;">
+    <input class="util_btn" type="button" value="clear" id="clr" size="30" onclick="erase()" style="position:absolute;top:60%;left:35%;">
 
+    </div>
+    <div id="footer">
+        <p>いつも努力して、決して停滞しない</p>
     </div>
 <script src="../Scripts/Canvas.js"></script>
 </body>

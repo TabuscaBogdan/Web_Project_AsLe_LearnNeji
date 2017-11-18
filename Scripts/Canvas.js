@@ -6,13 +6,16 @@ var canvas, ctx, flag = false,
     dot_flag = false;
 
 var x = "black",
-    y = 2;
+    z=10,
+    y = 10;
 
 function init() {
     canvas = document.getElementById('can');
     ctx = canvas.getContext("2d");
     w = canvas.width;
     h = canvas.height;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0,0,w,h);
 
     canvas.addEventListener("mousemove", function (e) {
         findxy('move', e)
@@ -52,8 +55,8 @@ function color(obj) {
             x = "white";
             break;
     }
-    if (x == "white") y = 14;
-    else y = 2;
+    if (x == "white") y = 20;
+    else y = 10;
 
 }
 
@@ -63,6 +66,7 @@ function draw() {
     ctx.lineTo(currX, currY);
     ctx.strokeStyle = x;
     ctx.lineWidth = y;
+    ctx.lineHeight=z;
     ctx.stroke();
     ctx.closePath();
 }
@@ -70,8 +74,10 @@ function draw() {
 function erase() {
     var m = confirm("Want to clear");
     if (m) {
+        ctx.fillStyle="#ffffff";
         ctx.clearRect(0, 0, w, h);
-        document.getElementById("canvasimg").style.display = "none";
+        ctx.fillRect(0,0,w,h);
+        //document.getElementById("canvasimg").style.display = "none";
     }
 }
 
@@ -94,7 +100,7 @@ function findxy(res, e) {
         if (dot_flag) {
             ctx.beginPath();
             ctx.fillStyle = x;
-            ctx.fillRect(currX, currY, 2, 2);
+            ctx.fillRect(currX, currY, 5, 5);
             ctx.closePath();
             dot_flag = false;
         }
