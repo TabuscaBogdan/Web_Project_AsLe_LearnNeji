@@ -60,7 +60,21 @@ img.alignright {
 img.aligncenter {
     margin: 0 auto;
 }
-
+iframe{
+	width:80%;
+	height:150%;	
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+#sites{
+	width:80%;
+	
+	text-align: center;
+	margin-left:auto; 
+    margin-right:auto;
+	margin-top:80px;
+}
 #wrapper {
     margin: 0 auto;
     padding: 0;
