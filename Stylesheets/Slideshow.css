@@ -1,0 +1,29 @@
+
+.display-container{
+	position:relative;
+	left:750px;
+	margin-top: 150px;
+	width:300px;
+	height:300px;
+	border:solid;
+}
+
+.mySlides{
+	position:absolute;
+	width: 100%;
+	height:100%;
+}
+
+.slide_button_left{
+	position:absolute;
+	top:45%;
+	left:-9%;	
+	color: darkred;
+}
+
+.slide_button_right{
+	position:absolute;
+	top:45%;
+	right:-9%;	
+	color: darkred;
+}

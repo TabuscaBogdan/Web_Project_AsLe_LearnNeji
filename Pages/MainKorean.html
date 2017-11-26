@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Page</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="../Stylesheets/WhiteRedBlack.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../Stylesheets/LeftMenu.css" rel="stylesheet" type="text/css" />
+	<link href="../Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body  onload="init()">
+
+    <div id="wrapper">
+        <!-- Meneu Bar Start -->
+        <div id="menu-wrapper">
+            <div id="menu">
+                <ul>
+					<li><a href="../Pages/Main.html">Start Page</a></li>
+					<li><a href="../Pages/MainJapanese.html">Learning Canvas</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Learning sites</a></li>
+                </ul>
+            </div>
+        </div>
+		<!-- Meneu Bar End -->
+	
+		<!-- Left Menu Start-->
+	
+		<div id="leftmenu">
+			<ul>
+				<li class="sub_menu_here"><a href='#'>Language</a>
+					<ul>
+						<li><a href='../Pages/MainJapanese.html'>Japanese</a> </li>
+						<li><a href='../Pages/MainKorean.html'>Korean</a> </li>
+					</ul>
+					</li>
+					<li class="sub_menu_here"><a href='#'>Simbols</a>
+					<ul>
+						<li><a href='#'>Do  や</a> </li>
+						<li><a href='#'>Watever   ま</a> </li>
+						<li><a href='#'>Test  す</a> </li>
+					</ul>
+					</li>
+			</ul>
+		</div>
+		<!-- Left Menu End-->
+	
+		<canvas id="can" width="400" height="400" style="position:absolute;top:20%;left:25%;border:2px solid;"> </canvas>
+		<div style="position:absolute;top:25%;left:50%;">Brush</div>
+		<div style="position:absolute;top:28%;left:50%;width:20px;height:20px;background:black;border:2px solid" id="black" onclick="color(this)"></div>
+		<div style="position:absolute;top:33%;left:50%;">Eraser</div>
+		<div style="position:absolute;top:37%;left:50%;width:20px;height:20px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+		<img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+		<input class="util_btn" type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:70%;left:26%;">
+		<input class="util_btn" type="button" value="clear" id="clr" size="30" onclick="erase()" style="position:absolute;top:70%;left:34%;">
+	
+		<div style="top: 20px; left: 180px; width: 350px; position: absolute;">
+			<div class="display-container">
+			  <img class="mySlides" src="../Images/Simbols/Korean/korean-a.png" >
+			  <img class="mySlides" src="../Images/Simbols/Korean/korean-ae.png" >
+			  <img class="mySlides" src="../Images/Simbols/Korean/korean-ya.png" >
+			  
+			  <button class= "slide_button_left" onclick="plusDivs(-1)">&#10094;</button>
+			  <button class= "slide_button_right" onclick="plusDivs(1)">&#10095;</button>
+			</div>
+		</div>
+	</div>
+    <div id="footer">
+        <p>いつも努力して、決して停滞しない</p>
+    </div>
+<script src="../Scripts/Canvas.js"></script>
+<script src="../Scripts/Slideshow.js"></script>
+</body>
+</html>
