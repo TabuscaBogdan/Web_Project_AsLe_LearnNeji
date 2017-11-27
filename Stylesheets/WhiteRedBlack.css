@@ -8,6 +8,7 @@ body {
     margin:0;
 	height:inherit;
 	min-width: 100%;
+    /*background: black;*/
     background: url(../Images/home_2.png);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -104,12 +105,12 @@ iframe{
 /*Top Menu */
 #menu-wrapper {
     height: 50px;
-	width:100%
+	width:100%;
     background: url(../Images/menu-wrapper.png) repeat-x left top;
 }
 
 #menu {
-    width:100%
+    width:100%;
     height: 50px;
     margin: 0 auto 0 auto;
     padding: 0px 40px;
