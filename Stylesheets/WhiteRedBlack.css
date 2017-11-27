@@ -68,6 +68,11 @@ iframe{
 	margin-right: 10px;
 	margin-top: 5px;
 }
+#text_block{
+	text-decoration: none;
+    color: #ffffff;
+	text-align: center;
+}
 #sites{
 	width:80%;
 	
