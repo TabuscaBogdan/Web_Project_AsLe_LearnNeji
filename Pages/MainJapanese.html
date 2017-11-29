@@ -37,9 +37,9 @@
 			</li>
 			<li class="sub_menu_here"><a href='#'>Simbols</a>
 			<ul id="simbols">
-				<li><a onclick="get_selected_symbol(this)" href='#'>Sim-ha</a> </li>
-				<li><a onclick="get_selected_symbol(this)" href='#'>Sim-ma</a> </li>
-				<li><a onclick="get_selected_symbol(this)" href='#'>Sim-na</a> </li>
+				<li><a onclick="get_selected_symbol(this)" href='#'>は-ha</a> </li>
+				<li><a onclick="get_selected_symbol(this)" href='#'>も-ma</a> </li>
+				<li><a onclick="get_selected_symbol(this)" href='#'>な-na</a> </li>
 			</ul>
 			</li>
 	</ul>
@@ -52,9 +52,10 @@
     <div style="position:absolute;top:28%;left:48%;">Eraser</div>
     <div style="position:absolute;top:32%;left:48%;width:20px;height:20px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
     <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
-    <input class="util_btn" type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:55%;left:26%;">
+    <input class="util_btn" type="button" value="save" id="btn" size="30" onclick="expose_errors()" style="position:absolute;top:55%;left:26%;">
     <input class="util_btn" type="button" value="clear" id="clr" size="30" onclick="erase()" style="position:absolute;top:55%;left:34%;">
 		<!--
+		save()
         <div style="top: 20px; left: 180px; width: 350px; position: absolute;">
             <div class="display-container">
               <img class="mySlides" src="../Images/Simbols/Japanese/hiragana-wa.png" >
@@ -75,5 +76,6 @@
 	<script src="../Scripts/Selectors.js"></script>
     <script src="../Scripts/Canvas.js"></script>
     <script src="../Scripts/Slideshow.js"></script>
+    <script src="../Scripts/Matchers.js"></script>
     </body>
     </html>
