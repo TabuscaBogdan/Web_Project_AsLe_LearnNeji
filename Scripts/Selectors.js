@@ -12,6 +12,6 @@ function get_selected_symbol(simbol)
     var nume=simbol.text.split("-");
     //window.alert(nume[1]);
     //trebuie adaugat si pt limbi
-    var path="../Images/Simbols/Japanese/hiragana-"+nume[1]+".png";
+    var path="../Images/Simbols/Japanese/h-"+nume[1]+".gif";
     document.getElementById("current_symbol").src=path;
 }
