@@ -28,6 +28,7 @@
 	color: darkred;
 }
 /*Enlarging Image:*/
+
 .enlarging_image{
 	position: relative;
 	left: 18%;
@@ -36,6 +37,7 @@
 	height: 100px;
 	border: solid;
 }
+
 .enlarging_image:hover{
 	-webkit-transform: scale(3.0);
 	-moz-transform: scale(3.0);
