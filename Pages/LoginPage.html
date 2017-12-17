@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="../Stylesheets/WhiteRedBlack.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../Stylesheets/LeftMenu.css" rel="stylesheet" type="text/css" />
+    <link href="../Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="firebase_init()">
+<form>
+    Email:<br>
+    <input type="text" id="email" value="something@service.com">
+    <br>
+    Password:<br>
+    <input type="password" id="password">
+    <br><br>
+    <input type="button" value="Login" onclick="logger()">
+</form>
+</body>
+<div id="footer">
+    <p>Login to track your progress</p>
+</div>
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script src="../Scripts/Logs.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+</html>

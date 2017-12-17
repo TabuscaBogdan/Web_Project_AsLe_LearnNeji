@@ -8,7 +8,7 @@
 	<link href="../Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body  onload="init()">
+<body>
 
     <div id="wrapper">
         <!-- Meneu Bar Start -->
@@ -18,6 +18,9 @@
 					<li><a href="../Pages/Main.html">Start Page</a></li>
 					<li><a href="../Pages/MainJapanese.html">Learning Canvas</a></li>
                     <li><a href="../Pages/OtherSites.html">Learning sites</a></li>
+                    <li id="log"><a href="../Pages/LoginPage.html" id="using">Login</a></li>
+                    <li id="out" hidden><a onclick="loggout()" href="javascript:void(0);">Logout</a></li>
+                    <li id="reg" hidden><a href="../Pages/RegisterPage.html">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -71,9 +74,23 @@
         <div id="footer">
             <p>いつも努力して、決して停滞しない</p>
         </div>
+
+    <!-- For Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <!-- For Firebase End -->
+
+    <script src="../Scripts/Logs.js"></script>
 	<script src="../Scripts/Selectors.js"></script>
     <script src="../Scripts/Canvas.js"></script>
     <script src="../Scripts/Slideshow.js"></script>
     <script src="../Scripts/Matchers.js"></script>
+    <script>
+        document.body.onload = function() {
+            init();
+            firebase_small_init();
+            is_logged();
+        };
+    </script>
     </body>
     </html>
