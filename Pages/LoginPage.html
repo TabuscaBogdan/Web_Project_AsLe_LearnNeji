@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1>
 <head>
     <title>Login Page</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href="../Stylesheets/WhiteRedBlack.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="../Stylesheets/LeftMenu.css" rel="stylesheet" type="text/css" />
     <link href="../Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" />
+	<link href="../Stylesheets/FormStyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body onload="firebase_init()">
+	<!-- Meneu Bar Start -->
+       <div id="menu-wrapper">
+			<div id="menu">
+                <ul>
+					<li><a href="../Pages/Main.html">Start Page</a></li>
+					<li><a href="../Pages/MainJapanese.html">Learning Canvas</a></li>
+                    <li><a href="../Pages/OtherSites.html">Learning sites</a></li>
+                    <li id="log"><a href="../Pages/LoginPage.html" id="using">Login</a></li>
+                    <li id="out" hidden><a onclick="loggout()" href="javascript:void(0);">Logout</a></li>
+                    <li id="reg" hidden><a href="../Pages/RegisterPage.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
 <form>
-    Email:<br>
+	Email
     <input type="text" id="email" value="something@service.com">
-    <br>
-    Password:<br>
+    <br><br><br>
+    Password
     <input type="password" id="password">
-    <br><br>
+    <br><br><br>
     <input type="button" value="Login" onclick="logger()">
 </form>
 </body>
