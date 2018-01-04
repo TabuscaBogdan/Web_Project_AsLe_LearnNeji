@@ -17,16 +17,24 @@
 					<li><a href="../Pages/Main.html">Start Page</a></li>
 					<li><a href="../Pages/MainJapanese.html">Learning Canvas</a></li>
                     <li><a href="../Pages/OtherSites.html">Learning sites</a></li>
+                    <li id="log"><a href="../Pages/LoginPage.html" id="using">Login</a></li>
+                    <li id="out" hidden><a onclick="loggout()" href="javascript:void(0);">Logout</a></li>
+                    <li id="reg" hidden><a href="../Pages/RegisterPage.html">Register</a></li>
                 </ul>
             </div>
         </div>
+		
 <form>
     Email
-    <input type="text" id="email" value="something@service.com">
+    <input type="text" id="email" value="something@service.com" required>
     <br><br><br>
     Password
-    <input type="password" id="password">
+    <input type="password" id="password" style = "top: 45%" required>
     <br><br><br>
+	Confirm password
+    <input type="password" id="conf_password" style = "top: 80%" onkeyup="check_password()" required>
+    <br><br><br>
+	<span id="message" style="position: absolute; top: 125%; left: 0%; font-size:20px;"></span>
     <input type="button" value="Register" onclick="register()">
 </form>
 </body>
@@ -35,5 +43,6 @@
 </div>
 <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
 <script src="../Scripts/Logs.js"></script>
+<script src="../Scripts/CheckPassword.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
 </html>

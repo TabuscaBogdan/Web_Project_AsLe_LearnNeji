@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1>
 <head>
     <title>Login Page</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -17,17 +17,20 @@
 					<li><a href="../Pages/Main.html">Start Page</a></li>
 					<li><a href="../Pages/MainJapanese.html">Learning Canvas</a></li>
                     <li><a href="../Pages/OtherSites.html">Learning sites</a></li>
+                    <li id="log"><a href="../Pages/LoginPage.html" id="using">Login</a></li>
+                    <li id="out" hidden><a onclick="loggout()" href="javascript:void(0);">Logout</a></li>
+                    <li id="reg" hidden><a href="../Pages/RegisterPage.html">Register</a></li>
                 </ul>
             </div>
         </div>
-<form>
+<form style="position:relative; top:25%">
 	Email
-    <input type="text" id="email" value="something@service.com">
+    <input type="text" id="email" value="something@service.com" style="top:15%" required>
     <br><br><br>
     Password
-    <input type="password" id="password">
+    <input type="password" id="password" style="top:65%" required>
     <br><br><br>
-    <input type="button" value="Login" onclick="logger()">
+    <input type="button" value="Login"  style="top:139%" onclick="logger()">
 </form>
 </body>
 <div id="footer">

@@ -1,15 +1,16 @@
 
 form{
 	position: relative;
-	top:20%;
+	top:7%;
 	left:35%;
+	height: 100;
 	font-size: 20px;
 	color: white;
 }
 
 input[type=text], select {
 	position: absolute;
-	top:15%;
+	top:10%;
 	left:0%;
     width: 30%;
     padding: 12px 20px;
@@ -22,7 +23,6 @@ input[type=text], select {
 
 input[type=password], select {
 	position: absolute;
-	top: 65%;
 	left:0%;
     width: 30%;
     padding: 12px 20px;
@@ -36,7 +36,7 @@ input[type=password], select {
 input[type=button] {
 	position: absolute;
 	top:135%;
-	left:5%;
+	left:0%;
     width: 20%;
     background-color: darkred;
     color: white;
