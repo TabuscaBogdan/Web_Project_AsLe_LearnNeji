@@ -270,6 +270,9 @@ function expose_errors() {
         errors[2]=-errors[2];
     }
     var precent_good=(100.0*errors[2])/errors[1];
+    var sym=document.getElementById("current_symbol").src.split("-");
+    var sy_name=sym[1].split(".")[0];
+    localStorage.setItem(sy_name,precent_good);
     window.alert(precent_good+'%');
 }
 
