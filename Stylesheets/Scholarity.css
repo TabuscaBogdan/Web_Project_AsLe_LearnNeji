@@ -20,6 +20,7 @@ body {
 
 h1 {
     font-size: 2em;
+	color: #ffffff
 }
 
 h2 {
@@ -86,6 +87,13 @@ iframe{
     margin: 0 auto;
     padding: 0;
 	left: 0;
+}
+#descr{
+	
+	width: 75%; 
+	margin: 0 auto;
+	background:url("../Images/menu-wrapper.png");
+	color: #ffffff;
 }
 
 #footer {
