@@ -94,34 +94,50 @@ function send_scores() {
     var user=localStorage.getItem("NejiID");
     if(user!=null)
     {
-        var database = firebase.database();
-        var jpn_len=symbol_vector_jpn.length;
-        var kor_len=symbol_vector_kor;
-        obj={};
-        var symbol;
-        for(var i=0;i<jpn_len;i++)
-        {
-            symbol=symbol_vector_jpn[i];
-            score=localStorage.getItem(symbol);
-            if(score==null)
+        //-----------------------------------------------
+        //Inainte de a seta trebuie facut un get la score pt a nu suprascrie high-score
+        var obj_w_simbols=firebase.database().ref('users/' + user);
+        var high_scores;
+        obj_w_simbols.on('value', function(snapshot) {
+            var scores = snapshot.val();
+            high_scores=scores;
+            //-----------------------------------------------
+            var database = firebase.database();
+            var jpn_len=symbol_vector_jpn.length;
+            var kor_len=symbol_vector_kor;
+            obj={};
+            var symbol;
+            for(var i=0;i<jpn_len;i++)
             {
-                score=0;
+                symbol=symbol_vector_jpn[i];
+                score=localStorage.getItem(symbol);
+                if(score==null)
+                {
+                    score=0;
+                }
+                var key = symbol;
+                if(high_scores[key]>score)
+                {
+
+                    score=high_scores[key];
+                }
+                obj[key] =score;
             }
-            var key = symbol;
-            obj[key] =score;
-        }
-        for(var i=0;i<kor_len;i++)
-        {
-            symbol=symbol_vector_kor[i];
-            score=localStorage.getItem(symbol);
-            if(score==null)
+            for(var i=0;i<kor_len;i++)
             {
-                score=0;
+                symbol=symbol_vector_kor[i];
+                score=localStorage.getItem(symbol);
+                if(score==null)
+                {
+                    score=0;
+                }
+                var key = symbol;
+                obj[key] =score;
             }
-            var key = symbol;
-            obj[key] =score;
-        }
-        firebase.database().ref('users/' + user).set(obj);
+
+            firebase.database().ref('users/' + user).set(obj);
+        });
+
     }
 }
 
