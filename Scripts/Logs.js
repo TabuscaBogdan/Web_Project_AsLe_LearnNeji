@@ -79,6 +79,21 @@ function loggout() {
     firebase.auth().signOut().then(function() {
         localStorage.setItem("NejiLoged","Login");
         localStorage.setItem("NejiID",null);
+        var symbol_vector_jpn=["ha","ma","na","ra","wa","yu"];
+        var symbol_vector_kor=["a","ae","ya"];
+        var jpn_len=symbol_vector_jpn.length;
+        var kor_len=symbol_vector_kor.length;
+        var symbol;
+        for(var i=0;i<jpn_len;i++)
+        {
+            symbol=symbol_vector_jpn[i];
+            localStorage.setItem(symbol,0);
+        }
+        for(var i=0;i<kor_len;i++)
+        {
+            symbol=symbol_vector_kor[i];
+            localStorage.setItem(symbol,0);
+        }
         console.log('Signed Out');
     }, function(error) {
         console.error('Sign Out Error', error);
@@ -104,7 +119,7 @@ function send_scores() {
             //-----------------------------------------------
             var database = firebase.database();
             var jpn_len=symbol_vector_jpn.length;
-            var kor_len=symbol_vector_kor;
+            var kor_len=symbol_vector_kor.length;
             obj={};
             var symbol;
             for(var i=0;i<jpn_len;i++)
@@ -116,10 +131,13 @@ function send_scores() {
                     score=0;
                 }
                 var key = symbol;
-                if(high_scores[key]>score)
-                {
+                if(high_scores!=null) {
+                    if (high_scores.hasOwnProperty(key)) {
+                        if (high_scores[key] > score) {
 
-                    score=high_scores[key];
+                            score = high_scores[key];
+                        }
+                    }
                 }
                 obj[key] =score;
             }
